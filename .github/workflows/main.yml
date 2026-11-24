@@ -30,7 +30,7 @@ jobs:
           ./scripts/feeds update -a || true
           ./scripts/feeds install -a -f || true
           ./scripts/feeds install -a || true
-          ./scripts/feeds find feeds/ package/ -path "*luci-app-daed*" -name "*.json" -exec sed -i 's/"title": "daed"/"title": "Daed"/g' {} + 
+          find feeds/ package/ -path "*luci-app-daed*" -name "*.json" -exec sed -i 's/"title": "daed"/"title": "Daed"/g' {} + 
 
       - name: Load defconfig and compile
         run: |
