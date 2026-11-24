@@ -1,4 +1,4 @@
-name: Build SL-3000 Daed Firmware
+name: SL-3000-eMMC (Daed + SSR+ + iStore + Docker)
 
 on:
   workflow_dispatch:
@@ -47,5 +47,5 @@ jobs:
       - name: Upload firmware
         uses: actions/upload-artifact@v4
         with:
-          name: SL-3000-eMMC-Daed-Firmware
+          name: SL-3000-eMMC-Daed-SSRPlus-iStore-Docker
           path: bin/targets/mediatek/filogic/*sl_3000-emmc*
